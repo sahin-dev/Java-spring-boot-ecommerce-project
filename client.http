@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/public/categories
+
+###
+
+POST http://localhost:8080/api/admin/categories
+content-type: application/json
+
+{
+    "categoryName":""
+}
+
+###
+
+DELETE http://localhost:8080/api/admin/categories/3
