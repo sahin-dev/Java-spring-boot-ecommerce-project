@@ -1,16 +1,13 @@
 package com.sahinsiraj.ecom.service;
 
-import java.util.List;
-
-import org.springframework.http.ResponseEntity;
-
-import com.sahinsiraj.ecom.model.Category;
+import com.sahinsiraj.ecom.dtos.CategoryDTO;
+import com.sahinsiraj.ecom.apiResponses.CategoryResponse;
 
 public interface CategoryService {
+    CategoryResponse getAllCategories(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
+    CategoryDTO createCategory(CategoryDTO categoryDTO);
 
-    List<Category> getAllCategories();
+    CategoryDTO deleteCategory(Long categoryId);
 
-    ResponseEntity<String> createCategory(Category category);
-    ResponseEntity<String> deleteCategory(Long categoryId);
-
+    CategoryDTO updateCategory(CategoryDTO categoryDTO, Long categoryId);
 }
